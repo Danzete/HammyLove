@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HammyLove · Presente digital para casal</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f0;--sf:#fff;--ink:#3b2417;--mut:#7d6556;--br:#f08a24;--lv:#e5557f;--ln:#f0dfcf;--soft:#ffeede;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1e1510;--sf:#2a1d15;--ink:#fbeee0;--mut:#c4ab98;--ln:#41301f;--soft:#3a2819;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1e1510;--sf:#2a1d15;--ink:#fbeee0;--mut:#c4ab98;--ln:#41301f;--soft:#3a2819;color-scheme:dark}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 Nunito,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:Fredoka,Nunito,sans-serif;line-height:1.12;letter-spacing:-.01em}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}section{padding:88px 0}
+.eye{color:var(--lv);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(28px,4vw,42px);font-weight:600;max-width:680px}.sub{color:var(--mut);max-width:560px;margin-top:12px}
+.hd{margin-bottom:40px}.hd.c{text-align:center}.hd.c h2,.hd.c .sub{margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:700 15px Nunito,sans-serif;padding:13px 24px;border-radius:999px;background:var(--br);color:#fff;text-decoration:none;box-shadow:0 6px 16px -6px var(--br);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ln)}.btn.l{background:var(--lv);box-shadow:0 6px 16px -6px var(--lv)}.btn.sm{padding:9px 18px;font-size:14px}
+.top{background:var(--ink);color:var(--bg);font-size:13px;overflow:hidden;white-space:nowrap;padding:7px 0}
+.top div{display:inline-block;animation:mq 30s linear infinite}.top span{margin:0 28px}
+@keyframes mq{to{transform:translateX(-50%)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:700;color:var(--ink);text-decoration:none}.logo svg{width:36px;height:36px}.logo b{color:var(--lv)}
+nav{display:flex;gap:28px}nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}nav a:hover{color:var(--br)}
+.burger{display:none;background:none;border:0;font-size:26px;color:var(--ink);cursor:pointer}
+.hero{padding:64px 0 40px}.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--soft);padding:6px 14px;border-radius:99px;font-size:14px;font-weight:600;margin-bottom:18px}
+h1{font-size:clamp(36px,5.4vw,60px);font-weight:700}h1 em{font-style:normal;color:var(--lv)}
+.hero p.lead{font-size:18px;color:var(--mut);margin:18px 0 28px;max-width:520px}.row{display:flex;gap:12px;flex-wrap:wrap}
+.book{perspective:1400px;display:flex;justify-content:center;flex-direction:column;align-items:center;gap:16px}
+.bk{width:min(300px,78vw);aspect-ratio:3/4;position:relative;cursor:pointer;border:0;background:none;padding:0}
+.pg{position:absolute;inset:0;border-radius:6px 18px 18px 6px;background:var(--sf);box-shadow:0 24px 50px -20px rgba(80,40,10,.45);padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;transform-origin:left center;transition:transform .8s cubic-bezier(.6,0,.3,1);border-left:8px solid var(--br)}
+.pg.f{transform:rotateY(-170deg);pointer-events:none}.pg h3{font-size:26px}.pg svg{width:96px}.pg small{color:var(--mut)}
+.hint{font-size:13px;color:var(--mut)}
+.mq{overflow:hidden;margin-top:48px;mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq>div{display:flex;gap:16px;width:max-content;animation:mq 60s linear infinite}.mq:hover>div{animation-play-state:paused}
+.tc{width:300px;background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:18px;font-size:14px;white-space:normal}.tc b{display:block;margin-top:8px;color:var(--lv);font-size:13px}
+.proof{display:flex;gap:14px;align-items:center;margin-top:28px;font-size:14px;color:var(--mut)}.proof strong{font:700 28px Fredoka;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:36px}.chip{background:var(--soft);padding:6px 14px;border-radius:99px;font-size:14px;font-weight:600}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:28px;padding:32px;box-shadow:0 12px 30px -20px rgba(80,40,10,.3);display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:28px}.card .t{color:var(--lv);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+.stage{background:var(--soft);border-radius:20px;min-height:260px;display:flex;align-items:center;justify-content:center;padding:20px;position:relative;overflow:hidden}
+.ph{width:170px;aspect-ratio:9/17;background:var(--ink);color:var(--bg);border-radius:28px;padding:8px;position:relative}
+.ph .in{height:100%;border-radius:22px;background:linear-gradient(160deg,#ffb36b,var(--lv));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;color:#fff;gap:8px;font-weight:700;font-size:14px}
+.ph svg{width:64px}.bars{position:absolute;top:18px;left:18px;right:18px;display:flex;gap:3px}.bars i{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4);overflow:hidden}.bars i b{display:block;height:100%;width:0;background:#fff}.bars i.d b{width:100%}.bars i.a b{animation:fill 3s linear forwards}
+@keyframes fill{to{width:100%}}
+.ctrl{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.tabs{display:inline-flex;background:var(--soft);border-radius:99px;padding:4px;margin-bottom:28px}.tabs button{border:0;background:none;cursor:pointer;font:700 14px Nunito;padding:9px 20px;border-radius:99px;color:var(--mut)}.tabs button[aria-selected=true]{background:var(--sf);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.cap{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:center}
+.lst{display:grid;grid-template-columns:1fr 1fr;gap:10px}.lst button{text-align:left;background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:14px 16px;cursor:pointer;font:600 15px Nunito;color:var(--ink)}.lst button[aria-pressed=true]{border-color:var(--br);background:var(--soft)}.lst small{display:block;font-weight:400;color:var(--mut);font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}.steps button{text-align:left;background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:16px;cursor:pointer;font:600 15px Nunito;color:var(--ink)}.steps button[aria-selected=true]{background:var(--br);color:#fff;border-color:var(--br)}.steps b{display:block;font:700 22px Fredoka;opacity:.7}
+.pan{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;background:var(--sf);border:1px solid var(--ln);border-radius:28px;padding:36px}.pan h3{font-size:30px;margin:6px 0 10px}
+.del{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.ul{list-style:none;padding:0;display:grid;gap:18px;margin-top:24px}.ul li{display:flex;gap:14px}.ul i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-style:normal;font-size:20px}
+.notif{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:14px 16px;display:flex;gap:12px;align-items:center;margin-top:14px;box-shadow:0 10px 24px -14px rgba(0,0,0,.3)}.notif svg{width:40px;flex:none}.qr{width:120px;height:120px;background:#fff;padding:8px;border-radius:12px;display:grid;grid-template-columns:repeat(11,1fr);gap:1px}.qr i{background:#3b2417}.qr i.o{background:#fff}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tg .tc{width:auto}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}.pl .card{position:relative}.pl .rec{border:2px solid var(--br)}.pl .rec:before{content:"Recomendado";position:absolute;top:-13px;left:24px;background:var(--br);color:#fff;font-weight:700;font-size:12px;padding:3px 12px;border-radius:99px}
+.pr{font:700 38px Fredoka}.pr s{font-size:15px;color:var(--mut);font-weight:400;margin-right:6px}.pl ul{list-style:none;padding:0;display:grid;gap:8px;font-size:14px;flex:1}.pl li:before{content:"✓ ";color:var(--br);font-weight:700}
+.trust{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin-top:28px;font-size:14px;color:var(--mut)}
+.faq{display:grid;grid-template-columns:260px 1fr;gap:40px}.gs{display:grid;gap:6px;align-content:start}.gs button{text-align:left;background:none;border:0;padding:12px 16px;border-radius:14px;cursor:pointer;font:600 15px Nunito;color:var(--ink)}.gs button[aria-selected=true]{background:var(--soft);color:var(--br)}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:16px 20px;margin-bottom:10px}summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}summary:after{content:"+";color:var(--br);font-size:20px;line-height:1}details[open] summary:after{content:"–"}details p{margin-top:10px;color:var(--mut);font-size:15px}
+.sup{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--soft);border-radius:20px;padding:18px}.sup svg{width:44px}.sup input{flex:1;min-width:180px;border:1px solid var(--ln);border-radius:99px;padding:11px 16px;font:15px Nunito;background:var(--sf);color:var(--ink)}
+.oc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.oc a{background:var(--sf);border:1px solid var(--ln);border-radius:16px;padding:14px 16px;color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}.oc a:hover{border-color:var(--br)}.oc small{display:block;font-weight:400;color:var(--mut)}
+footer{background:var(--ink);color:var(--bg);padding:56px 0 28px;font-size:14px}footer .w>div{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}footer h4{margin-bottom:10px;font:600 16px Fredoka}footer a{display:block;color:inherit;opacity:.75;text-decoration:none;padding:3px 0}footer .logo{color:var(--bg)}.cp{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);opacity:.65;font-size:13px}
+dialog{border:0;border-radius:28px;padding:32px;width:min(480px,92vw);background:var(--sf);color:var(--ink)}dialog::backdrop{background:rgba(30,15,5,.55)}
+dialog label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}dialog input,dialog select{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--ln);font:15px Nunito;background:var(--bg);color:var(--ink)}
+.pb{height:6px;background:var(--soft);border-radius:9px;margin-bottom:18px}.pb i{display:block;height:100%;background:var(--br);border-radius:9px;transition:width .3s}
+@media(max-width:960px){.hero .w,.g2,.del,.cap,.pan,.faq{grid-template-columns:1fr}.pl,.tg{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.oc{grid-template-columns:1fr 1fr}footer .w>div{grid-template-columns:1fr 1fr}.pan .ph{margin:auto}section{padding:60px 0}.gs{grid-auto-flow:column;overflow-x:auto}.cap .ph{margin:auto}}
+@media(max-width:760px){nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 24px;border-bottom:1px solid var(--ln);gap:14px}nav.o{display:flex}.burger{display:block}header .btn.sm{display:none}.lst{grid-template-columns:1fr}.w{padding:0 18px}}
+@media(max-width:480px){.steps,.oc{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="ham" viewBox="0 0 100 100"><circle cx="24" cy="26" r="12" fill="#e9a35c"/><circle cx="24" cy="26" r="6" fill="#ffc9c9"/><circle cx="76" cy="26" r="12" fill="#e9a35c"/><circle cx="76" cy="26" r="6" fill="#ffc9c9"/><ellipse cx="50" cy="56" rx="38" ry="34" fill="#f6b873"/><ellipse cx="50" cy="66" rx="24" ry="20" fill="#fff1de"/><circle cx="36" cy="50" r="5" fill="#3b2417"/><circle cx="64" cy="50" r="5" fill="#3b2417"/><circle cx="37.5" cy="48.5" r="1.7" fill="#fff"/><circle cx="65.5" cy="48.5" r="1.7" fill="#fff"/><ellipse cx="50" cy="60" rx="4" ry="3" fill="#e5557f"/><path d="M50 63v4M44 69q6 4 12 0" stroke="#3b2417" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="25" cy="64" r="6" fill="#ff9fb0" opacity=".7"/><circle cx="75" cy="64" r="6" fill="#ff9fb0" opacity=".7"/><path d="M50 14c-3-6-12-2-8 5 2 3 8 7 8 7s6-4 8-7c4-7-5-11-8-5z" fill="#e5557f"/></symbol></defs></svg>
+<div class="top"><div id="tp"></div></div>
+<header><div class="w"><a class="logo" href="#"><svg><use href="#ham"/></svg>Hammy<b>Love</b></a>
+<nav id="nv"><a href="#presentes">Presentes</a><a href="#como">Como funciona</a><a href="#precos">Preços</a><a href="#duvidas">Dúvidas</a><a href="#contato">Atendimento</a></nav>
+<div class="row" style="align-items:center"><button class="btn sm" data-open>Criar agora</button><button class="burger" id="bg" aria-label="Menu">☰</button></div></div></header>
+
+<main>
+<section class="hero"><div class="w"><div>
+<div class="pill">🐹 <span><b>+48.000</b> presentes criados</span></div>
+<h1>Presente digital para casal: <em>cada lembrança</em> numa página.</h1>
+<p class="lead">Um álbum para folhear no celular ou uma retrospectiva em stories. O Hammy faz uma pergunta de cada vez e monta tudo com as suas respostas.</p>
+<div class="row"><button class="btn" data-open>Criar presente agora</button><a class="btn g" href="#presentes">Ver os presentes</a></div>
+<div class="proof"><strong>4,9★</strong><span>média de avaliação<br>dos casais que presentearam</span></div></div>
+<div class="book"><button class="bk" id="bk" aria-label="Folhear o álbum"></button><div class="hint" id="bh">Toque no livro para virar a página</div></div></div>
+<div class="w"><div class="mq"><div id="m1"></div></div>
+<div class="chips" id="occ"></div></div></section>
+
+<section id="presentes"><div class="w"><div class="hd c"><div class="eye">Os presentes</div><h2>Duas formas de contar a história de vocês</h2><p class="sub">Escolha entre folhear com calma ou assistir juntos.</p></div>
+<div class="g2">
+<div class="card"><div class="t">Para folhear com calma</div><h3>Álbum do Casal</h3><p class="sub" style="margin:0">Um livro na tela, com fotos, carta e a música de vocês.</p>
+<div class="stage"><div class="ph"><div class="in" id="al"></div></div></div>
+<div class="ctrl"><button class="btn sm g" id="ap">‹ Anterior</button><button class="btn sm g" id="an">Próxima ›</button></div>
+<div class="row"><button class="btn sm" data-open="album">Criar álbum</button><button class="btn sm g" data-demo="album">Folhear um exemplo</button></div></div>
+<div class="card"><div class="t">Para assistir juntos</div><h3>Retrospectiva do Casal</h3><p class="sub" style="margin:0">Stories animados com a música de vocês do começo ao fim.</p>
+<div class="stage"><div class="ph"><div class="bars" id="rb"></div><div class="in" id="rs"></div></div></div>
+<div class="ctrl"><button class="btn sm g" id="rp">⏮</button><button class="btn sm g" id="rt">⏸ Pausar</button><button class="btn sm g" id="rn">⏭</button></div>
+<div class="row"><button class="btn sm l" data-open="retro">Criar retrospectiva</button><button class="btn sm g" data-demo="retro">Ver um exemplo</button></div></div></div>
+<p class="sub" style="text-align:center;margin:28px auto 0">Os dois abrem no celular, sem aplicativo, por link ou QR Code.</p></div></section>
+
+<section style="background:var(--soft)"><div class="w"><div class="hd"><div class="eye">As seções</div><h2>Tudo o que cabe em cada presente</h2><p class="sub">Escolha o presente e veja cada parte do jeito que quem você ama vai abrir.</p></div>
+<div class="tabs" id="t1" role="tablist"><button role="tab" aria-selected="true" data-k="album">Álbum</button><button role="tab" aria-selected="false" data-k="retro">Retrospectiva</button></div>
+<div class="cap"><div class="lst" id="cl"></div><div class="ph"><div class="in" id="cp"></div></div></div></div></section>
+
+<section id="como"><div class="w"><div class="hd"><div class="eye">Como funciona</div><h2>Você escolhe as lembranças, o Hammy faz o resto</h2><p class="sub">Tudo pelo celular, uma pergunta de cada vez.</p></div>
+<div class="steps" id="st" role="tablist"></div><div class="pan" id="sp"></div>
+<div style="text-align:center;margin-top:32px"><button class="btn" data-open>Criar presente agora</button><p class="hint" style="margin-top:10px">Comece com uma foto e a música de vocês.</p></div></div></section>
+
+<section style="background:var(--soft)"><div class="w del"><div><div class="eye">A entrega</div><h2>Chega como mensagem, abre como livro</h2><p class="sub">Quem recebe toca no link ou aponta a câmera para o QR Code. Abre no navegador, pronto para folhear.</p>
+<ul class="ul"><li><i>🔗</i><div><b>Um link só de vocês</b><br><span class="sub" style="margin:0">Mande em qualquer conversa, na hora que quiser.</span></div></li><li><i>🔳</i><div><b>QR Code para imprimir</b><br><span class="sub" style="margin:0">Em cartão, caixinha ou junto de um presente físico.</span></div></li><li><i>📱</i><div><b>Sem aplicativo e sem cadastro</b><br><span class="sub" style="margin:0">Abre em qualquer celular ou computador.</span></div></li></ul></div>
+<div style="display:grid;gap:14px;justify-items:center"><div class="qr" id="qr"></div><div class="notif" style="max-width:380px"><svg><use href="#ham"/></svg><div><b>Edu 💜</b> · agora<br><span style="font-size:14px;color:var(--mut)">abre quando tiver um tempinho 💜<br>hammylove.example/presente/edu-e-ana</span></div></div></div></div></section>
+
+<section><div class="w"><div class="hd c"><div class="eye">Quem já deu</div><h2>O presente que vira assunto</h2><p class="sub"><b>+48 mil</b> casais já surpreenderam quem amam.</p></div>
+<div class="mq"><div id="m2"></div></div></div></section>
+
+<section id="precos" style="background:var(--soft)"><div class="w"><div class="hd c"><div class="eye">Planos</div><h2>Pagamento único, sem mensalidade</h2><p class="sub">Escolha o presente e por quanto tempo ele fica no ar.</p>
+<div class="tabs" id="t2" role="tablist" style="margin:24px 0 0"><button role="tab" aria-selected="true" data-k="álbum">Álbum</button><button role="tab" aria-selected="false" data-k="retrospectiva">Retrospectiva</button></div></div>
+<div class="pl" id="pl"></div>
+<div class="trust"><span>✔ Você monta tudo antes de pagar</span><span>✔ Pix ou cartão</span><span>✔ Acesso imediato</span><span>✔ 7 dias de garantia</span></div></div></section>
+
+<section id="duvidas"><div class="w"><div class="hd"><div class="eye">Dúvidas</div><h2>Tudo o que perguntam antes de presentear</h2></div>
+<div class="faq"><div class="gs" id="fg" role="tablist"></div><div><div id="fl"></div>
+<div class="sup" id="contato"><svg width="44" height="44"><use href="#ham"/></svg><div style="flex:1;min-width:160px"><b>Atendimento HammyLove</b><br><span style="font-size:13px;color:var(--mut)">Seg a sáb, 8h às 20h (Brasília)</span></div><input id="sq" placeholder="Escreva a sua dúvida…" aria-label="Sua dúvida"><button class="btn sm" id="ss">Enviar</button><div id="sm" style="width:100%;font-size:14px;color:var(--lv)"></div></div></div></div></div></section>
+
+<section style="background:var(--soft)"><div class="w"><div class="hd"><div class="eye">Para cada ocasião</div><h2>Um presente para o momento de vocês</h2></div><div class="oc" id="oc"></div></div></section>
+</main>
+
+<footer><div class="w"><div><div><a class="logo" href="#"><svg width="36" height="36"><use href="#ham"/></svg>Hammy<b>Love</b></a><p style="margin-top:12px;opacity:.75;max-width:300px">Presentes digitais para declarar o seu amor.</p></div>
+<div><h4>Presentes</h4><a href="#presentes">Retrospectiva</a><a href="#presentes">Álbum</a></div>
+<div><h4>Produto</h4><a href="#como">Como funciona</a><a href="#precos">Preços</a><a href="#" data-open>Criar presente</a></div>
+<div><h4>Empresa</h4><a href="#contato">Atendimento</a><a href="#duvidas">FAQ</a></div></div>
+<div class="cp">© 2026 HammyLove · projeto de demonstração. Feito com 🧡 no Brasil.</div></div></footer>
+
+<dialog id="dg"><div class="pb"><i id="pi"></i></div><div id="db"></div><div class="row" style="margin-top:22px;justify-content:space-between"><button class="btn g sm" id="dx">Cancelar</button><div class="row"><button class="btn g sm" id="dp">Voltar</button><button class="btn sm" id="dn">Continuar</button></div></div></dialog>
+
+<script>
+const $=s=>document.querySelector(s),H=(e,h)=>e.innerHTML=h,E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ham='<svg><use href="#ham"/></svg>';
+H($('#tp'),[...Array(2)].map(()=>'<span>Crie pelo celular e entregue hoje</span><span>Álbum ou retrospectiva animada</span><span>Link ou QR Code, sem aplicativo</span>').join(''));
+$('#bg').onclick=()=>$('#nv').classList.toggle('o');$('#nv').onclick=()=>$('#nv').classList.remove('o');
+const oc=['mesversário','aniversário de namoro','Dia dos Namorados','bodas','pedido de namoro','namoro à distância','ou só porque sim'];H($('#occ'),oc.map(o=>`<span class="chip">${o}</span>`).join(''));
+// hero book
+const bp=[['Nosso álbum','Ana & Beto · 2026'],['Nossa história','Tudo começou numa quarta-feira…'],['Uma carta','Para abrir com calma 💌'],['Nossa música','▶ tocando agora'],['Para sempre','Feito com amor']];let bi=0;
+function book(){H($('#bk'),bp.map((p,i)=>`<div class="pg ${i<bi?'f':''}" style="z-index:${bp.length-i}"><svg viewBox="0 0 100 100">${i%2?'':''}<use href="#ham"/></svg><h3>${p[0]}</h3><small>${p[1]}</small></div>`).join(''))}
+book();$('#bk').onclick=()=>{bi=(bi+1)%(bp.length);book();$('#bh').textContent=bi?`Página ${bi+1} de ${bp.length}`:'Toque no livro para virar a página'};
+// testimonials
+const T=[['Joana','Ela passou a noite no sofá virando as páginas e me chamando: “amor, olha essa!”'],['Marcos','Pus a nossa música e as fotos do primeiro encontro. Ela chorou já na carta.'],['Bia e Léo','Imprimi o QR num cartão e entreguei com as flores. A reação foi impagável.'],['Rafa','Namoro à distância: mandei o link numa quarta qualquer, só pra lembrar do quanto amo.'],['Camila','O hamster dançando na caixinha de música foi a parte favorita dele.'],['Tiago','Fizemos 1 ano e eu queria algo que não fosse físico. Acertei em cheio.'],['Lu e Dani','Toda mesversário a gente coloca fotos novas. Virou nosso diário.'],['Paulo','Retrospectiva com a música dele tocando. Ficou sem palavras.']];
+const tc=a=>a.map(t=>`<div class="tc">“${E(t[1])}”<b>${E(t[0])}</b></div>`).join('');H($('#m1'),tc(T.concat(T)));H($('#m2'),tc(T.concat(T)));
+// presentes
+const AL=['Capa','Carta no envelope','Linha do tempo','Nossa música','Fotos','Pote de motivos'];let ai=0;const alr=()=>H($('#al'),ham+`<div>${AL[ai]}</div><small style="opacity:.8">${ai+1}/${AL.length}</small>`);alr();
+$('#ap').onclick=()=>{ai=(ai+AL.length-1)%AL.length;alr()};$('#an').onclick=()=>{ai=(ai+1)%AL.length;alr()};
+const RS=['A linha do tempo','Quanto tempo juntos','Nossa música','Jogo rápido','Carta final'];let ri=0,rt,pl=true;
+function rr(){H($('#rb'),RS.map((_,i)=>`<i class="${i<ri?'d':i==ri&&pl?'a':''}"><b></b></i>`).join(''));H($('#rs'),ham+RS[ri]);clearTimeout(rt);if(pl)rt=setTimeout(()=>{ri=(ri+1)%RS.length;rr()},3000)}rr();
+$('#rp').onclick=()=>{ri=(ri+RS.length-1)%RS.length;rr()};$('#rn').onclick=()=>{ri=(ri+1)%RS.length;rr()};$('#rt').onclick=e=>{pl=!pl;e.target.textContent=pl?'⏸ Pausar':'▶ Tocar';rr()};
+// captions
+const CP={album:[['Capa','Foto e nomes do casal'],['Carta','Dentro de um envelope'],['Linha do tempo','Datas que marcaram'],['Música','Trilha de vocês'],['Fotos','Galeria para folhear'],['Pote de motivos','Um motivo por toque']],retro:[['Stories','Fotos animadas'],['Contador','Dias, horas e minutos juntos'],['Música','Toca do começo ao fim'],['Jogos','Rápidos e divertidos'],['Roda-gigante','Sorteia o próximo date'],['Final','Carta e declaração']]};
+let ck='album',ci=0;function cap(){H($('#cl'),CP[ck].map((c,i)=>`<button aria-pressed="${i==ci}" data-i="${i}">${c[0]}<small>${c[1]}</small></button>`).join(''));H($('#cp'),ham+`<div>${CP[ck][ci][0]}</div><small>${CP[ck][ci][1]}</small>`)}cap();
+$('#cl').onclick=e=>{const b=e.target.closest('button');if(b){ci=+b.dataset.i;cap()}};
+function tabs(id,fn){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;$(id).querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x==b));fn(b.dataset.k)}}
+tabs('#t1',k=>{ck=k;ci=0;cap()});
+// steps
+const S=[['Escolha o presente','Um álbum para folhear ou uma retrospectiva animada. O Hammy mostra os dois antes.'],['Conte a história de vocês','Nomes, o dia em que tudo começou, fotos, música e carta, uma pergunta por vez.'],['Receba o álbum pronto','Confira a prévia, escolha o plano e pague por Pix ou cartão.'],['Surpreenda quem você ama','Mande o link ou imprima o QR Code e pronto.']];let si=0;
+function stp(){H($('#st'),S.map((s,i)=>`<button role="tab" aria-selected="${i==si}" data-i="${i}"><b>0${i+1}</b>${s[0]}</button>`).join(''));H($('#sp'),`<div><div class="eye">Etapa ${si+1} de 4</div><h3>${S[si][0]}</h3><p class="sub" style="margin:0">${S[si][1]}</p></div><div class="ph"><div class="in">${ham}<div>${S[si][0]}</div></div></div>`)}stp();
+$('#st').onclick=e=>{const b=e.target.closest('button');if(b){si=+b.dataset.i;stp()}};
+// QR decorative
+H($('#qr'),[...Array(121)].map((_,i)=>`<i class="${(i*7+i%5*3)%3?'':'o'}"></i>`).join(''));
+// plans
+const PL={álbum:[['Por 24 horas','Para uma data',17.9,35.9,['No ar 24 horas','Edição durante as 24h','QR Code padrão']],['Para Sempre','Para crescer com vocês',27.9,55.9,['No ar para sempre','Edição quando quiser','QR Code padrão']],['Plano Completo','Para entregar em mãos',37.9,0,['Tudo do Para Sempre','Quadros e cartão para imprimir','Aviso de visita','QR Code especial']]]};PL['retrospectiva']=PL['álbum'];
+const R=n=>'R$ '+n.toFixed(2).replace('.',',');let pk='álbum';
+function plr(){H($('#pl'),PL[pk].map((p,i)=>`<div class="card ${i==1?'rec':''}"><h3>${p[0]}</h3><p class="sub" style="margin:0">${p[1]}</p><div class="pr">${p[3]?`<s>${R(p[3])}</s>`:''}${R(p[2])}</div><div class="hint">pagamento único · ou 4x de ${R(p[2]/4*1.08)}</div><ul>${p[4].map(x=>`<li>${x}</li>`).join('')}</ul><button class="btn ${i==1?'':'g'}" data-open>Criar nosso ${pk}</button></div>`).join(''))}plr();tabs('#t2',k=>{pk=k;plr()});
+// faq
+const F=[['O presente',[['O que é a HammyLove?','Um site de presentes digitais para casais. Você transforma fotos, música, datas e uma carta num presente que abre no celular por link ou QR Code.'],['Álbum ou Retrospectiva?','O álbum é um livro para folhear com calma. A retrospectiva são stories animados com música. Dá para dar os dois.'],['Para quais datas servem?','Mesversário, aniversário de namoro, Dia dos Namorados, bodas, pedido de namoro ou só porque sim.'],['Como funciona?','Você escolhe o presente, responde às perguntas do Hammy, confere a prévia, escolhe o plano e recebe link e QR Code.']]],
+['Entrega e acesso',[['Como entrego?','Mande o link por mensagem ou imprima o QR Code num cartão ou caixinha.'],['Quem recebe precisa de app ou conta?','Não. Abre no navegador, sem cadastro e sem senha.'],['Por quanto tempo fica no ar?','Depende do plano: 24 horas ou para sempre.'],['Posso editar depois?','Sim, nos planos Para Sempre e Completo, pelo painel e com o mesmo link.']]],
+['Planos e pagamento',[['Quanto custa?','Pagamento único, sem mensalidade. Os valores aparecem em Planos.'],['É grátis?','Montar e ver a prévia é grátis. Para entregar, o presente é pago.'],['Posso ver antes de pagar?','Sim, o pagamento só acontece depois da prévia.'],['Dá para imprimir?','No Plano Completo você baixa arquivos para imprimir. Nada vai pelo correio.'],['E se eu não gostar?','Garantia de 7 dias com reembolso total.']]],
+['Confiança',[['É confiável?','Esta é uma página de demonstração, sem cobranças reais.'],['Quem vê as fotos?','Só quem tem o link ou o QR Code.']]]];let fi=0;
+function faq(){H($('#fg'),F.map((g,i)=>`<button role="tab" aria-selected="${i==fi}" data-i="${i}">${g[0]} (${g[1].length})</button>`).join(''));H($('#fl'),F[fi][1].map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join(''))}faq();
+$('#fg').onclick=e=>{const b=e.target.closest('button');if(b){fi=+b.dataset.i;faq()}};
+$('#ss').onclick=()=>{const v=$('#sq').value.trim();$('#sm').textContent=v?'Recebemos a sua dúvida (demonstração). Responderemos por aqui.':'Escreva a sua dúvida primeiro.';if(v)$('#sq').value=''};
+// occasions
+const O=['Natal','Ano Novo','Carta de amor','Aniversário de namoro','Presente à distância','Dia dos Namorados','Aniversário de casamento','Para namorada','Para namorado','Com QR Code','Aniversário do seu amor','Última hora','Mesversário','Dia da Mulher','Pedido de namoro','Scrapbook do casal'];
+H($('#oc'),O.map(o=>`<a href="#" data-open>${o}<small>Retrospectiva · Álbum</small></a>`).join(''));
+// wizard
+const dg=$('#dg'),W={g:'album',n1:'',n2:'',d:'',m:'',p:1};let ws=0;
+function wz(){$('#pi').style.width=(ws+1)*25+'%';const b=$('#db');
+if(ws==0)H(b,`<h3>Escolha o presente</h3><label><input type="radio" name="g" value="album" ${W.g=='album'?'checked':''} style="width:auto"> Álbum do Casal</label><label><input type="radio" name="g" value="retro" ${W.g=='retro'?'checked':''} style="width:auto"> Retrospectiva do Casal</label>`);
+if(ws==1)H(b,`<h3>A história de vocês</h3><label>Seu nome</label><input id="a1" value="${E(W.n1)}"><label>Nome de quem você ama</label><input id="a2" value="${E(W.n2)}"><label>Dia em que tudo começou</label><input id="a3" type="date" value="${W.d}">`);
+if(ws==2)H(b,`<h3>A música de vocês</h3><label>Música e artista</label><input id="a4" value="${E(W.m)}" placeholder="Ex.: Nossa canção · Artista"><p class="hint" style="margin-top:8px">As fotos e a carta você adiciona no editor.</p>`);
+if(ws==3)H(b,`<h3>Escolha o plano</h3><select id="a5">${PL.álbum.map((p,i)=>`<option value="${i}" ${W.p==i?'selected':''}>${p[0]} · ${R(p[2])}</option>`).join('')}</select><p class="hint" style="margin-top:10px">Demonstração: nenhum pagamento é feito.</p>`);
+if(ws==4)H(b,`<h3>Pronto! 🐹💕</h3><p class="sub">${E(W.n1||'Você')} e ${E(W.n2||'seu amor')}: o presente foi criado (demo). Seu link:</p><p style="margin-top:10px"><b>hammylove.example/presente/${E((W.n1+'-e-'+W.n2).toLowerCase().replace(/\W+/g,'-'))}</b></p>`);
+$('#dp').style.visibility=ws&&ws<4?'visible':'hidden';$('#dn').textContent=ws==3?'Finalizar':ws==4?'Fechar':'Continuar'}
+function sv(){if(ws==0)W.g=(document.querySelector('[name=g]:checked')||{}).value||'album';if(ws==1){W.n1=$('#a1').value;W.n2=$('#a2').value;W.d=$('#a3').value}if(ws==2)W.m=$('#a4').value;if(ws==3)W.p=+$('#a5').value}
+$('#dn').onclick=()=>{if(ws==4)return dg.close();sv();ws++;wz()};$('#dp').onclick=()=>{sv();ws--;wz()};$('#dx').onclick=()=>dg.close();
+document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o){e.preventDefault();ws=0;if(o.dataset.open)W.g=o.dataset.open;wz();dg.showModal()}const d=e.target.closest('[data-demo]');if(d){const k=d.dataset.demo;document.getElementById('presentes').scrollIntoView();if(k=='album'){ai=0;alr()}else{ri=0;rr()}}});
+</script></body></html>
